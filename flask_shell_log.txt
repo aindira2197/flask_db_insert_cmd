@@ -1,0 +1,40 @@
+(c) Корпорация Майкрософт (Microsoft Corporation). Все права защищены.
+
+C:\Users\6\Desktop\Indira_proj>.venv\scripts\activate
+
+(.venv) C:\Users\6\Desktop\Indira_proj>code .
+
+(.venv) C:\Users\6\Desktop\Indira_proj>flask shell
+Python 3.12.4 (tags/v3.12.4:8e8a4ba, Jun  6 2024, 19:30:16) [MSC v.1940 64 bit (AMD64)] on win32
+App: app
+Instance: C:\Users\6\Desktop\Indira_proj\instance
+>>> from app import *
+>>> u1 = User(username='Aliy', age=20)
+>>> u2 = User(username='Vali0', age=30)
+>>>
+>>> db.session.add(u1)
+>>> db.session.add(u2)
+>>>
+>>> db.session.commit()
+>>>
+>>> post1 = Post(title='Hello', contect='First post', user_id = u1.id)
+>>> post1.title
+'Hello'
+>>> pist1.id
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+NameError: name 'pist1' is not defined. Did you mean: 'post1'?
+>>> post1.id
+>>> db.session.commit()
+>>> db.session.add(post1)
+>>> db.session.commit()
+>>>
+>>> post1.title = 'Others title'
+>>> db.session.commit()
+>>> u1.username
+'Aliy'
+>>> u2.age = 32
+>>> db.session.commit()
+>>>
+>>> u3 = User(username='Jamol',age=20)
+>>> db.session.commit()
